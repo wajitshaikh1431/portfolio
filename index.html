@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wajit Shaikh | Cyber Security CTO & Educator</title>
+    <meta name="description"
+        content="Official Portfolio of Mr. Wajit R. Shaikh - Technical Head & CTO, Cybersecurity Specialist, and Computer Science Lecturer.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header Navigation (Figma Style) -->
+    <header class="header" id="header">
+        <div class="container nav-wrapper">
+            <a href="#hero" class="logo">
+                WAJIT SHAIKH<span> ✦</span>
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#hero" class="nav-link active">Home</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#research" class="nav-link">Research Papers</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <a href="#contact" class="btn btn-orange nav-cta-btn">
+                Hire Me
+            </a>
+
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Figma Hero Section -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <!-- Hero Left Content -->
+                <div class="hero-content">
+                    <p class="hero-subheading">Hi I am</p>
+                    <h2 class="hero-name">Mr. WAJIT SHAIKH</h2>
+                    <h1 class="hero-main-title">
+                        Computer & ML Engineer
+                    </h1>
+
+                    <p class="hero-bio-short">
+                        Technical and results-driven professional with a strong foundation in Computer Science and Cyber
+                        Security. Moving into academia to leverage industry expertise developed through engaging with
+                        over <strong>300 engineering colleges</strong>.
+                    </p>
+
+                    <!-- Social Circle Icons -->
+                    <div class="social-icons-row">
+                        <a href="https://linkedin.com/in/wajitshaikh" target="_blank" rel="noopener"
+                            class="social-icon-circle" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.instagram.com/imwajit/" target="_blank" rel="noopener"
+                            class="social-icon-circle" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="mailto:wajitshaikh02@gmail.com" class="social-icon-circle" aria-label="Email">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                        <a href="tel:+917517850807" class="social-icon-circle" aria-label="Phone">
+                            <i class="fa-solid fa-phone"></i>
+                        </a>
+                        <a href="#projects" class="social-icon-circle" aria-label="Projects">
+                            <i class="fa-solid fa-code"></i>
+                        </a>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="hero-cta">
+                        <a href="#contact" class="btn btn-orange">
+                            Hire Me
+                        </a>
+                        <a href="https://drive.google.com/file/d/1u24KYvbYXPPedSmEXIy9HWRxThiC_R_j/view" target="_blank"
+                            class="btn btn-outline">
+                            <i class="fa-solid fa-download"></i> Download CV
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Right Profile Backdrop Circle -->
+                <div class="hero-profile-wrap">
+                    <div class="hero-circle-bg"></div>
+                    <div class="hero-profile-img-box">
+                        <img src="profile.png" alt="Mr. Wajit R. Shaikh">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Integrated Stats Bar -->
+            <div class="stats-strip">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="300">0</div>
+                        <div class="stat-label">Engineering Colleges Networked</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="3">0</div>
+                        <div class="stat-label">Published Research Papers</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="5">0</div>
+                        <div class="stat-label">Professional Experience Roles</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="5">0</div>
+                        <div class="stat-label">Major Projects Delivered</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Summary / Services & Expertise -->
+    <section class="section-padding" id="services">
+        <div class="container">
+            <h2 class="section-title">Core Services & Expertise</h2>
+            <p class="section-subtitle">Bridging academic theory with real-world industry demands across cybersecurity,
+                AI, and leadership.</p>
+
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3 class="service-title">Cyber Security & Honeypots</h3>
+                    <p class="service-desc">
+                        Designing intrusion detection decoy systems (SSH & Telnet honeypots), payload capturing, threat
+                        intelligence analysis, and Alexa voice phishing security.
+                    </p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-code-branch"></i></div>
+                    <h3 class="service-title">Technical CTO & Strategy</h3>
+                    <p class="service-desc">
+                        Spearheading technology & business strategy as Technical Head & CTO @ Danges Academy, managing
+                        platform deployment, UX, and student acquisition.
+                    </p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+                    <h3 class="service-title">Computer Science Lecturing</h3>
+                    <p class="service-desc">
+                        Delivering engaging technical lectures @ Shreeyash College of Engg. & Tech., aligning
+                        engineering curriculum, and mentoring students in cybersecurity & ML.
+                    </p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-handshake"></i></div>
+                    <h3 class="service-title">B2B Academic Partnerships</h3>
+                    <p class="service-desc">
+                        Built and maintained strategic B2B relationships with college directors, TPOs, and professors
+                        across 300+ engineering colleges for GateTutor.
+                    </p>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-brain"></i></div>
+                    <h3 class="service-title">Machine Learning & Data Science</h3>
+                    <p class="service-desc">
+                        Certified ML Engineer & AI-Data Scientist specializing in predictive modeling, Python data
+                        analytics, SQL, AWS, and prompt engineering.
+                    </p>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-network-wired"></i></div>
+                    <h3 class="service-title">Network & System Admin</h3>
+                    <p class="service-desc">
+                        Leveraging strong technical infrastructure, Linux administration, and network problem-solving
+                        skills developed as Programmer @ PES College.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Experience Section (From CV) -->
+    <section class="section-padding" id="experience">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <p class="section-subtitle">My professional leadership, lecturing, development, and business background.</p>
+
+            <div class="experience-timeline-grid">
+                <!-- Role 1 -->
+                <div class="exp-figma-card">
+                    <div class="exp-card-header">
+                        <div>
+                            <h3 class="exp-role-name">Lecturer</h3>
+                            <div class="exp-institution">Shreeyash College of Engineering & Tech., Chh. Sambhajinagar
+                            </div>
+                        </div>
+                        <span class="exp-period-badge">Jan 2026 – Present</span>
+                    </div>
+                    <ul class="exp-bullet-list">
+                        <li>Deliver technical lectures, utilizing strong presentation and communication skills to
+                            effectively convey complex engineering and cybersecurity concepts.</li>
+                    </ul>
+                </div>
+
+                <!-- Role 2 -->
+                <div class="exp-figma-card">
+                    <div class="exp-card-header">
+                        <div>
+                            <h3 class="exp-role-name">Technical Head & CTO</h3>
+                            <div class="exp-institution">Danges Academy, Chh. Sambhajinagar</div>
+                        </div>
+                        <span class="exp-period-badge">June 2025 – Present</span>
+                    </div>
+                    <ul class="exp-bullet-list">
+                        <li>Spearhead the technical and business strategy for the academy, aligning educational product
+                            offerings with market demands.</li>
+                        <li>Oversee the design, development, and deployment of the Danges Academy website, ensuring a
+                            seamless user experience to drive student acquisition.</li>
+                    </ul>
+                </div>
+
+                <!-- Role 3 -->
+                <div class="exp-figma-card">
+                    <div class="exp-card-header">
+                        <div>
+                            <h3 class="exp-role-name">Programmer</h3>
+                            <div class="exp-institution">P. E. S. College of Engineering, Chh. Sambhajinagar</div>
+                        </div>
+                        <span class="exp-period-badge">July 2024 – January 2026</span>
+                    </div>
+                    <ul class="exp-bullet-list">
+                        <li>Collaborate with faculty and students, providing technical solutions and streamlining
+                            operational workflows.</li>
+                        <li>Leverage strong problem-solving skills to maintain network administration and technical
+                            infrastructure.</li>
+                    </ul>
+                </div>
+
+                <!-- Role 4 -->
+                <div class="exp-figma-card">
+                    <div class="exp-card-header">
+                        <div>
+                            <h3 class="exp-role-name">Business Development Executive</h3>
+                            <div class="exp-institution">GateTutor Infoedge Pvt. Ltd., Pune</div>
+                        </div>
+                        <span class="exp-period-badge">June 2023 – June 2024</span>
+                    </div>
+                    <ul class="exp-bullet-list">
+                        <li>Successfully prospected, engaged, and negotiated with academic institutions, building a
+                            network of over 300 engineering colleges.</li>
+                        <li>Cultivated and maintained strategic B2B relationships with college directors, Training &
+                            Placement Officers (TPOs), and professors to integrate the GATETUTOR Web Application and
+                            Pre-placement Test solutions.</li>
+                        <li>Translated client feedback into actionable insights to improve service delivery and product
+                            adoption.</li>
+                    </ul>
+                </div>
+
+
+
+                <!-- Role 6 -->
+                <div class="exp-figma-card">
+                    <div class="exp-card-header">
+                        <div>
+                            <h3 class="exp-role-name">Quality Inspection Engineer</h3>
+                            <div class="exp-institution">Dhoot Transmission Pvt. Ltd., Aurangabad</div>
+                        </div>
+                        <span class="exp-period-badge">March 2023 – May 2023</span>
+                    </div>
+                    <ul class="exp-bullet-list">
+                        <li>Ensured industrial quality inspection standards, testing verification, and manufacturing
+                            process compliance.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DEDICATED SECTION 1: Research Papers (From CV) -->
+    <section class="section-padding" id="research">
+        <div class="container">
+            <h2 class="section-title">Research Papers</h2>
+            <p class="section-subtitle">Published scientific papers and intrusion detection security research.</p>
+
+            <div class="research-grid">
+                <!-- Paper 1 -->
+                <div class="research-figma-card">
+                    <div class="research-header">
+                        <span class="paper-year-tag">2025</span>
+                        <span class="journal-badge">IJEDR</span>
+                    </div>
+                    <h3 class="research-title">Custom Honeypot For SSH and Telnet Intrusion Detection: A Comprehensive
+                        Review</h3>
+                    <div class="research-issn">IJEDR, ISSN: 2321-9939</div>
+                    <p class="research-abstract-preview">
+                        Developed decoy intrusion detection framework for capturing malicious command sequences,
+                        authentication attempts, and SSH/Telnet threat payloads for real-time threat intelligence.
+                    </p>
+                    <button class="btn btn-orange" onclick="openPaperModal('paper1')">
+                        Read Abstract <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Paper 2 -->
+                <div class="research-figma-card">
+                    <div class="research-header">
+                        <span class="paper-year-tag">2025</span>
+                        <span class="journal-badge">JETIR</span>
+                    </div>
+                    <h3 class="research-title">Security & Privacy Implications of Malicious Third-Party Alexa Skills: A
+                        Case Study on Voice-Based Phishing Attacks</h3>
+                    <div class="research-issn">JETIR, ISSN: 2349-5162</div>
+                    <p class="research-abstract-preview">
+                        Empirical vulnerability study analyzing voice-based phishing attack vectors, malicious skill
+                        masquerading, and authentication spoofing on smart voice assistant platforms.
+                    </p>
+                    <button class="btn btn-orange" onclick="openPaperModal('paper2')">
+                        Read Abstract <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Paper 3 -->
+                <div class="research-figma-card">
+                    <div class="research-header">
+                        <span class="paper-year-tag">2022</span>
+                        <span class="journal-badge">IJARIIE</span>
+                    </div>
+                    <h3 class="research-title">Krushi Sarthi Android Application</h3>
+                    <div class="research-issn">IJARIIE, Paper ID: 18938</div>
+                    <p class="research-abstract-preview">
+                        Agricultural decision support system mobile application assisting rural farming communities with
+                        crop advisory management, market rates, and weather notifications.
+                    </p>
+                    <button class="btn btn-orange" onclick="openPaperModal('paper3')">
+                        Read Abstract <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DEDICATED SECTION 2: Projects (From CV) -->
+    <section class="section-padding" id="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <p class="section-subtitle">Software applications, systems, and platforms developed by Wajit Shaikh.</p>
+
+            <!-- Figma Filter Tabs -->
+            <div class="filter-tabs-row">
+                <button class="filter-tab active" data-filter="all">All Projects</button>
+                <button class="filter-tab" data-filter="web">Web Applications</button>
+                <button class="filter-tab" data-filter="mobile">Android Apps</button>
+                <button class="filter-tab" data-filter="security">Security Systems</button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="portfolio-grid">
+                <!-- Project 1 -->
+                <div class="portfolio-card" data-category="security">
+                    <div class="portfolio-img-box">
+                        <i class="fa-solid fa-terminal"></i>
+                    </div>
+                    <div class="portfolio-info">
+                        <div>
+                            <div class="portfolio-title">Custom Honeypot System</div>
+                            <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.2rem;">SSH & Telnet
+                                Intrusion Detection</div>
+                        </div>
+                        <span class="portfolio-badge">Security System</span>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="portfolio-card" data-category="web">
+                    <div class="portfolio-img-box">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div class="portfolio-info">
+                        <div>
+                            <div class="portfolio-title">Danges Academy Website</div>
+                            <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.2rem;">CTO Platform
+                                Engineering</div>
+                        </div>
+                        <span class="portfolio-badge">Web Application</span>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="portfolio-card" data-category="web">
+                    <div class="portfolio-img-box">
+                        <i class="fa-solid fa-network-wired"></i>
+                    </div>
+                    <div class="portfolio-info">
+                        <div>
+                            <div class="portfolio-title">GateTutor Web Application</div>
+                            <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.2rem;">300+
+                                Engineering Colleges Portal</div>
+                        </div>
+                        <span class="portfolio-badge">Web Application</span>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="portfolio-card" data-category="web">
+                    <div class="portfolio-img-box">
+                        <i class="fa-solid fa-file-signature"></i>
+                    </div>
+                    <div class="portfolio-info">
+                        <div>
+                            <div class="portfolio-title">Preplacement Test Web Application</div>
+                            <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.2rem;">Student
+                                Placement Assessment</div>
+                        </div>
+                        <span class="portfolio-badge">Web Application</span>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="portfolio-card" data-category="mobile">
+                    <div class="portfolio-img-box">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                    </div>
+                    <div class="portfolio-info">
+                        <div>
+                            <div class="portfolio-title">Krushi Sarthi Android App</div>
+                            <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.2rem;">Agri Support
+                                Mobile App</div>
+                        </div>
+                        <span class="portfolio-badge">Android App</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills & Core Competencies (From CV) -->
+    <section class="section-padding" id="skills">
+        <div class="container">
+            <h2 class="section-title">Core Competencies & Skills</h2>
+            <p class="section-subtitle">Proficiency metrics across business strategy, technical assets, and design.</p>
+
+            <!-- Circular Gauge Metrics -->
+            <div class="skills-gauges-grid">
+                <!-- Skill 1 -->
+                <div class="skill-gauge-item">
+                    <div class="circle-gauge">
+                        <svg viewBox="0 0 120 120">
+                            <circle class="circle-bg" cx="60" cy="60" r="54"></circle>
+                            <circle class="circle-progress" cx="60" cy="60" r="54" data-progress="60"></circle>
+                        </svg>
+                        <span class="gauge-percentage">60%</span>
+                    </div>
+                    <div class="gauge-label">Teaching</div>
+                </div>
+
+                <!-- Skill 2 -->
+                <div class="skill-gauge-item">
+                    <div class="circle-gauge">
+                        <svg viewBox="0 0 120 120">
+                            <circle class="circle-bg" cx="60" cy="60" r="54"></circle>
+                            <circle class="circle-progress" cx="60" cy="60" r="54" data-progress="50"></circle>
+                        </svg>
+                        <span class="gauge-percentage">50%</span>
+                    </div>
+                    <div class="gauge-label">Marketing</div>
+                </div>
+
+                <!-- Skill 3 -->
+                <div class="skill-gauge-item">
+                    <div class="circle-gauge">
+                        <svg viewBox="0 0 120 120">
+                            <circle class="circle-bg" cx="60" cy="60" r="54"></circle>
+                            <circle class="circle-progress" cx="60" cy="60" r="54" data-progress="60"></circle>
+                        </svg>
+                        <span class="gauge-percentage">60%</span>
+                    </div>
+                    <div class="gauge-label">Designing</div>
+                </div>
+
+                <!-- Skill 4 -->
+                <div class="skill-gauge-item">
+                    <div class="circle-gauge">
+                        <svg viewBox="0 0 120 120">
+                            <circle class="circle-bg" cx="60" cy="60" r="54"></circle>
+                            <circle class="circle-progress" cx="60" cy="60" r="54" data-progress="60"></circle>
+                        </svg>
+                        <span class="gauge-percentage">60%</span>
+                    </div>
+                    <div class="gauge-label">MS Office</div>
+                </div>
+
+                <!-- Skill 5 -->
+                <div class="skill-gauge-item">
+                    <div class="circle-gauge">
+                        <svg viewBox="0 0 120 120">
+                            <circle class="circle-bg" cx="60" cy="60" r="54"></circle>
+                            <circle class="circle-progress" cx="60" cy="60" r="54" data-progress="40"></circle>
+                        </svg>
+                        <span class="gauge-percentage">40%</span>
+                    </div>
+                    <div class="gauge-label">Python & Linux</div>
+                </div>
+            </div>
+
+            <!-- Categorized Skills Cards (Direct from CV) -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+                <div class="service-card">
+                    <h3 class="service-title"><i class="fa-solid fa-chart-line"></i> Business & Strategy</h3>
+                    <div class="skill-chips-row" style="justify-content: flex-start;">
+                        <span class="skill-chip">B2B Sales</span>
+                        <span class="skill-chip">Client Relationship Mgmt</span>
+                        <span class="skill-chip">Strategic Partnerships</span>
+                        <span class="skill-chip">Academic Marketing</span>
+                        <span class="skill-chip">Problem Solving</span>
+                        <span class="skill-chip">Prompt Engineering</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <h3 class="service-title"><i class="fa-solid fa-code"></i> Technical Assets</h3>
+                    <div class="skill-chips-row" style="justify-content: flex-start;">
+                        <span class="skill-chip">Machine Learning</span>
+                        <span class="skill-chip">Python</span>
+                        <span class="skill-chip">SQL</span>
+                        <span class="skill-chip">AWS Cloud</span>
+                        <span class="skill-chip">Moodle Cloud</span>
+                        <span class="skill-chip">Linux Admin</span>
+                        <span class="skill-chip">Network Admin</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <h3 class="service-title"><i class="fa-solid fa-palette"></i> Design & Digital</h3>
+                    <div class="skill-chips-row" style="justify-content: flex-start;">
+                        <span class="skill-chip">UI/UX Design</span>
+                        <span class="skill-chip">Frontend Dev</span>
+                        <span class="skill-chip">Figma</span>
+                        <span class="skill-chip">Canva</span>
+                        <span class="skill-chip">Web Development</span>
+                        <span class="skill-chip">Android App Dev</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Certifications Section (From CV) -->
+    <section class="section-padding" id="education">
+        <div class="container">
+            <h2 class="section-title">Education & Certifications</h2>
+            <p class="section-subtitle">Academic qualifications and specialized professional certifications.</p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem;">
+                <!-- Education Card -->
+                <div class="service-card">
+                    <h3 class="service-title" style="margin-bottom: 1.5rem;"><i class="fa-solid fa-graduation-cap"></i>
+                        Education</h3>
+
+                    <div
+                        style="margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-subtle); padding-bottom: 1.25rem;">
+                        <div style="font-size: 1.15rem; font-weight: 700; color: #fff;">M-Tech in CS & Engineering
+                            (Cyber Security)</div>
+                        <div style="color: var(--text-muted); font-size: 0.95rem;">P. E. S. College of Engineering,
+                            Aurangabad</div>
+                        <div
+                            style="color: var(--accent-orange); font-size: 0.9rem; font-weight: 600; margin-top: 0.25rem;">
+                            Status: Pursuing</div>
+                    </div>
+
+                    <div
+                        style="margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-subtle); padding-bottom: 1.25rem;">
+                        <div style="font-size: 1.15rem; font-weight: 700; color: #fff;">B-Tech in Computer Science &
+                            Engineering</div>
+                        <div style="color: var(--text-muted); font-size: 0.95rem;">P. E. S. College of Engineering,
+                            Aurangabad (2023)</div>
+                        <div
+                            style="color: var(--accent-orange); font-size: 0.9rem; font-weight: 600; margin-top: 0.25rem;">
+                            CGPA: 8.10 / 10</div>
+                    </div>
+
+                    <div
+                        style="margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-subtle); padding-bottom: 1.25rem;">
+                        <div style="font-size: 1.15rem; font-weight: 700; color: #fff;">Diploma in Computer Engineering
+                        </div>
+                        <div style="color: var(--text-muted); font-size: 0.95rem;">Government Polytechnic, Jintur (2019)
+                        </div>
+                        <div
+                            style="color: var(--accent-orange); font-size: 0.9rem; font-weight: 600; margin-top: 0.25rem;">
+                            Score: 68.60%</div>
+                    </div>
+
+                    <div>
+                        <div style="font-size: 1.15rem; font-weight: 700; color: #fff;">SSC (Secondary School
+                            Certificate)</div>
+                        <div style="color: var(--text-muted); font-size: 0.95rem;">Shreemati Laxmibai Dhenkare Madhyamik
+                            Vidhyalaya, Fattepur (2016)</div>
+                        <div
+                            style="color: var(--accent-orange); font-size: 0.9rem; font-weight: 600; margin-top: 0.25rem;">
+                            Score: 88.60%</div>
+                    </div>
+                </div>
+
+                <!-- Certifications Card -->
+                <div class="service-card">
+                    <h3 class="service-title" style="margin-bottom: 1.5rem;"><i class="fa-solid fa-certificate"></i>
+                        Certifications</h3>
+
+                    <div
+                        style="margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-subtle); padding-bottom: 1.25rem;">
+                        <div style="font-size: 1.15rem; font-weight: 700; color: #fff;">AI-Data Scientist</div>
+                        <div style="color: var(--text-muted); font-size: 0.95rem;">Acharya Chanakya Kaushalya Vikas
+                            Kendra</div>
+                        <div
+                            style="color: var(--accent-orange); font-size: 0.9rem; font-weight: 600; margin-top: 0.25rem;">
+                            Issued: 17 FEB. 2025</div>
+                    </div>
+
+                    <div>
+                        <div style="font-size: 1.15rem; font-weight: 700; color: #fff;">Machine Learning Engineer</div>
+                        <div style="color: var(--text-muted); font-size: 0.95rem;">Symbiosis Skills And Professional
+                            University, Pune</div>
+                        <div
+                            style="color: var(--accent-orange); font-size: 0.9rem; font-weight: 600; margin-top: 0.25rem;">
+                            15 FEB. 2022 to 15 FEB. 2023</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Me Section (Danges Academy Style) -->
+    <section class="section-padding" id="contact">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 3.5rem;">
+                <span class="contact-top-badge">happy to see you here...</span>
+                <h2 class="section-title" style="margin-top: 0.5rem;">Get In Touch</h2>
+                <p class="section-subtitle" style="margin-bottom: 0;">Fill out the form below or reach out directly
+                    through any of these channels.</p>
+            </div>
+
+            <div class="contact-danges-grid">
+                <!-- Left Column: Information Cards -->
+                <div class="contact-info-card shadow-lg">
+                    <h3 class="contact-card-heading">Contact Information</h3>
+                    <p class="contact-card-sub">Reach out through any of these channels and I'll get back to you
+                        shortly.</p>
+
+                    <div class="info-items-list">
+                        <!-- Item 1: Email -->
+                        <div class="info-item-block">
+                            <div class="info-icon-badge icon-teal">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="info-item-title">Email Us</h4>
+                                <a href="mailto:wajitshaikh02@gmail.com"
+                                    class="info-item-link">wajitshaikh02@gmail.com</a>
+                                <p class="info-item-sub">We'll respond within 24 hours</p>
+                            </div>
+                        </div>
+
+                        <!-- Item 2: Phone -->
+                        <div class="info-item-block">
+                            <div class="info-icon-badge icon-blue">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="info-item-title">Call Us</h4>
+                                <a href="tel:+917517850807" class="info-item-link">+91 7517850807</a>
+                                <p class="info-item-sub">Mon-Sat, 9AM to 6PM</p>
+                            </div>
+                        </div>
+
+                        <!-- Item 3: Visit Us -->
+                        <div class="info-item-block">
+                            <div class="info-icon-badge icon-purple">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="info-item-title">Visit Us</h4>
+                                <p class="info-item-text">Latur & Chh. Sambhajinagar, Maharashtra, India</p>
+                                <a href="https://maps.google.com/?q=Chhatrapati+Sambhajinagar+Maharashtra"
+                                    target="_blank" rel="noopener" class="btn btn-directions-sm">
+                                    <i class="fa-solid fa-map-location-dot"></i> Get Directions
+                                </a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <!-- Right Column: Contact Form Card -->
+                <div class="contact-form-card shadow-lg">
+                    <h3 class="contact-card-heading">Send a Message</h3>
+                    <p class="contact-card-sub">Fill out the form below and I'll get back to you as soon as possible.
+                    </p>
+
+                    <form id="portfolio-contact-form" class="danges-form">
+                        <!-- First Name & Last Name Row -->
+                        <div class="form-row-2col">
+                            <div class="form-group">
+                                <label for="contact-fname" class="danges-label">First Name <span
+                                        class="required-star">*</span></label>
+                                <input type="text" id="contact-fname" class="danges-input" placeholder="Wajit" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-lname" class="danges-label">Last Name <span
+                                        class="required-star">*</span></label>
+                                <input type="text" id="contact-lname" class="danges-input" placeholder="Shaikh"
+                                    required>
+                            </div>
+                        </div>
+
+                        <!-- Email Address -->
+                        <div class="form-group">
+                            <label for="contact-email" class="danges-label">Email Address <span
+                                    class="required-star">*</span></label>
+                            <input type="email" id="contact-email" class="danges-input"
+                                placeholder="yourname@example.com" required>
+                        </div>
+
+                        <!-- Phone Number -->
+                        <div class="form-group">
+                            <label for="contact-phone" class="danges-label">Phone Number</label>
+                            <input type="tel" id="contact-phone" class="danges-input" placeholder="+91 9876543210">
+                        </div>
+
+                        <!-- Message -->
+                        <div class="form-group">
+                            <label for="contact-message" class="danges-label">Message <span
+                                    class="required-star">*</span></label>
+                            <textarea id="contact-message" class="danges-textarea" rows="4"
+                                placeholder="How can I help you?" required></textarea>
+                        </div>
+
+                        <!-- Send Button -->
+                        <button type="submit" class="btn btn-danges-submit">
+                            Send Message <i class="fa-solid fa-paper-plane" style="margin-left: 0.5rem;"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Figma Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">WAJIT SHAIKH</div>
+
+            <ul class="footer-nav">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#research">Research Papers</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact me</a></li>
+            </ul>
+
+            <div class="footer-socials">
+                <a href="https://linkedin.com/in/wajitshaikh" target="_blank" rel="noopener" class="social-icon-circle"
+                    aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.instagram.com/imwajit/" target="_blank" rel="noopener" class="social-icon-circle"
+                    aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="mailto:wajitshaikh02@gmail.com" class="social-icon-circle" aria-label="Email">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+                <a href="tel:+917517850807" class="social-icon-circle" aria-label="Phone">
+                    <i class="fa-solid fa-phone"></i>
+                </a>
+                <a href="#projects" class="social-icon-circle" aria-label="Projects">
+                    <i class="fa-solid fa-code"></i>
+                </a>
+            </div>
+
+            <div class="footer-contact-details">
+                <div><i class="fa-solid fa-envelope"></i> wajitshaikh02@gmail.com</div>
+                <div><i class="fa-solid fa-phone"></i> +91 7517850807</div>
+                <div><i class="fa-solid fa-location-dot"></i> Latur & Chh. Sambhajinagar, MH</div>
+            </div>
+
+            <div class="footer-copy">
+                © 2026 <strong>Mr. Wajit R. Shaikh</strong>. All rights reserved. | Cyber Security CTO & Educator
+            </div>
+        </div>
+    </footer>
+
+    <!-- Research Abstract Modal -->
+    <div class="modal-backdrop" id="paper-modal">
+        <div class="modal-card">
+            <button class="modal-close" onclick="closePaperModal()"><i class="fa-solid fa-xmark"></i></button>
+            <div id="paper-modal-content">
+                <!-- Injected via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
