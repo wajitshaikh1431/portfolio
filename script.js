@@ -196,9 +196,28 @@ document.addEventListener('DOMContentLoaded', () => {
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            const fname = document.getElementById('contact-fname')?.value || 'Friend';
-            const lname = document.getElementById('contact-lname')?.value || '';
-            alert(`Thank you ${fname} ${lname}! Your message has been sent successfully.`);
+
+            const fname = document.getElementById('contact-fname')?.value.trim() || 'Friend';
+            const lname = document.getElementById('contact-lname')?.value.trim() || '';
+            const email = document.getElementById('contact-email')?.value.trim() || '';
+            const phone = document.getElementById('contact-phone')?.value.trim() || 'Not provided';
+            const message = document.getElementById('contact-message')?.value.trim() || '';
+
+            const recipient = 'wajitshaikh02@gmail.com';
+            const subject = `Portfolio Contact Form - ${fname} ${lname}`.trim();
+            const body = [
+                `Name: ${fname} ${lname}`.trim(),
+                `Email: ${email}`,
+                `Phone: ${phone}`,
+                '',
+                'Message:',
+                message
+            ].join('\n');
+
+            const mailtoLink = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+            window.location.href = mailtoLink;
+            alert(`Thank you ${fname} ${lname}! Your email app will open with your message ready to send to ${recipient}.`);
             contactForm.reset();
         });
     }
