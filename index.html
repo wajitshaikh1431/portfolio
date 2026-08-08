@@ -720,18 +720,18 @@
                     <p class="contact-card-sub">Fill out the form below and I'll get back to you as soon as possible.
                     </p>
 
-                    <form id="portfolio-contact-form" class="danges-form">
+                    <form id="portfolio-contact-form" class="danges-form" action="mailto:wajitshaikh02@gmail.com" method="post" enctype="text/plain">
                         <!-- First Name & Last Name Row -->
                         <div class="form-row-2col">
                             <div class="form-group">
                                 <label for="contact-fname" class="danges-label">First Name <span
                                         class="required-star">*</span></label>
-                                <input type="text" id="contact-fname" class="danges-input" placeholder="Wajit" required>
+                                <input type="text" id="contact-fname" name="First Name" class="danges-input" placeholder="Wajit" required>
                             </div>
                             <div class="form-group">
                                 <label for="contact-lname" class="danges-label">Last Name <span
                                         class="required-star">*</span></label>
-                                <input type="text" id="contact-lname" class="danges-input" placeholder="Shaikh"
+                                <input type="text" id="contact-lname" name="Last Name" class="danges-input" placeholder="Shaikh"
                                     required>
                             </div>
                         </div>
@@ -740,20 +740,20 @@
                         <div class="form-group">
                             <label for="contact-email" class="danges-label">Email Address <span
                                     class="required-star">*</span></label>
-                            <input type="email" id="contact-email" class="danges-input"
+                            <input type="email" id="contact-email" name="Email" class="danges-input"
                                 placeholder="yourname@example.com" required>
                         </div>
 
                         <!-- Phone Number -->
                         <div class="form-group">
                             <label for="contact-phone" class="danges-label">Phone Number</label>
-                            <input type="tel" id="contact-phone" class="danges-input" placeholder="+91 9876543210">
+                            <input type="tel" id="contact-phone" name="Phone" class="danges-input" placeholder="+91 9876543210">
                         </div>
 
                         <!-- Hire For -->
                         <div class="form-group">
                             <label for="contact-hire-for" class="danges-label">Hire For</label>
-                            <select id="contact-hire-for" class="danges-input">
+                            <select id="contact-hire-for" name="Hire For" class="danges-input">
                                 <option value="" selected disabled>Select an option</option>
                                 <option value="Research Paper">Research Paper</option>
                                 <option value="Counseling">Counseling</option>
@@ -770,7 +770,7 @@
                         <div class="form-group">
                             <label for="contact-message" class="danges-label">Message <span
                                     class="required-star">*</span></label>
-                            <textarea id="contact-message" class="danges-textarea" rows="4"
+                            <textarea id="contact-message" name="Message" class="danges-textarea" rows="4"
                                 placeholder="How can I help you?" required></textarea>
                         </div>
 
