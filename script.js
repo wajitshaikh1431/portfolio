@@ -201,6 +201,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const lname = document.getElementById('contact-lname')?.value.trim() || '';
             const email = document.getElementById('contact-email')?.value.trim() || '';
             const phone = document.getElementById('contact-phone')?.value.trim() || 'Not provided';
+            const hireFor = document.getElementById('contact-hire-for')?.value.trim() || 'Not provided';
             const message = document.getElementById('contact-message')?.value.trim() || '';
 
             const recipient = 'wajitshaikh02@gmail.com';
@@ -209,6 +210,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 `Name: ${fname} ${lname}`.trim(),
                 `Email: ${email}`,
                 `Phone: ${phone}`,
+                `Hire For: ${hireFor}`,
                 '',
                 'Message:',
                 message
