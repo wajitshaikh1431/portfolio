@@ -218,7 +218,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const mailtoLink = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-            window.location.href = mailtoLink;
+            try {
+                window.location.href = mailtoLink;
+            } catch (error) {
+                window.open(mailtoLink, '_blank', 'noopener,noreferrer');
+            }
+
             alert(`Thank you ${fname} ${lname}! Your email app will open with your message ready to send to ${recipient}.`);
             contactForm.reset();
         });
