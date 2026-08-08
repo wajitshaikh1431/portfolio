@@ -2,7 +2,11 @@
   Figma Portfolio Interactive Script - Wajit Shaikh
 */
 
-const WEB3FORMS_ACCESS_KEY = 'YOUR_WEB3FORMS_ACCESS_KEY'; // Replace with your actual Web3Forms access key
+const WEB3FORMS_ACCESS_KEY = 'YOUR_WEB3FORMS_ACCESS_KEY'; // Replace with your actual Web3Forms access key (must be a UUID)
+
+function isValidUUID(value) {
+    return /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(value);
+}
 
 const paperData = {
     paper1: {
@@ -220,6 +224,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (!firstName || !lastName || !email || !message) {
                 setStatus('Please complete all required fields before sending.', 'error');
+                return;
+            }
+
+            if (!isValidUUID(WEB3FORMS_ACCESS_KEY)) {
+                setStatus('Contact form is not configured correctly. Update WEB3FORMS_ACCESS_KEY with a valid Web3Forms UUID access key.', 'error');
                 return;
             }
 
