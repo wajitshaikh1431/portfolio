@@ -2,6 +2,8 @@
   Figma Portfolio Interactive Script - Wajit Shaikh
 */
 
+const WEB3FORMS_ACCESS_KEY = 'YOUR_WEB3FORMS_ACCESS_KEY'; // Replace with your actual Web3Forms access key
+
 const paperData = {
     paper1: {
         title: "Custom Honeypot For SSH and Telnet Intrusion Detection: A Comprehensive Review",
@@ -192,40 +194,73 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // 6. Contact Form Handler
+    const contactFormStatus = document.getElementById('contact-form-status');
+
+    function setStatus(message, type = 'info') {
+        if (contactFormStatus) {
+            contactFormStatus.textContent = message;
+            contactFormStatus.classList.remove('status-success', 'status-error', 'status-info');
+            contactFormStatus.classList.add(`status-${type}`);
+        } else {
+            console[type === 'error' ? 'warn' : 'log'](message);
+        }
+    }
+
     const contactForm = document.getElementById('portfolio-contact-form');
     if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
+        contactForm.addEventListener('submit', event => {
+            event.preventDefault();
+            const form = event.target;
+            const firstName = form.querySelector('#contact-fname').value.trim();
+            const lastName = form.querySelector('#contact-lname').value.trim();
+            const email = form.querySelector('#contact-email').value.trim();
+            const phone = form.querySelector('#contact-phone').value.trim();
+            const hire = form.querySelector('#contact-hire-for').value;
+            const message = form.querySelector('#contact-message').value.trim();
 
-            const fname = document.getElementById('contact-fname')?.value.trim() || 'Friend';
-            const lname = document.getElementById('contact-lname')?.value.trim() || '';
-            const email = document.getElementById('contact-email')?.value.trim() || '';
-            const phone = document.getElementById('contact-phone')?.value.trim() || 'Not provided';
-            const hireFor = document.getElementById('contact-hire-for')?.value.trim() || 'Not provided';
-            const message = document.getElementById('contact-message')?.value.trim() || '';
-
-            const recipient = 'wajitshaikh02@gmail.com';
-            const subject = `Portfolio Contact Form - ${fname} ${lname}`.trim();
-            const body = [
-                `Name: ${fname} ${lname}`.trim(),
-                `Email: ${email}`,
-                `Phone: ${phone}`,
-                `Hire For: ${hireFor}`,
-                '',
-                'Message:',
-                message
-            ].join('\n');
-
-            const mailtoLink = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-            try {
-                window.location.href = mailtoLink;
-            } catch (error) {
-                window.open(mailtoLink, '_blank', 'noopener,noreferrer');
+            if (!firstName || !lastName || !email || !message) {
+                setStatus('Please complete all required fields before sending.', 'error');
+                return;
             }
 
-            alert(`Thank you ${fname} ${lname}! Your email app will open with your message ready to send to ${recipient}.`);
-            contactForm.reset();
+            const fullName = `${firstName} ${lastName}`;
+            const payload = {
+                access_key: WEB3FORMS_ACCESS_KEY,
+                subject: 'New inquiry from Portfolio website',
+                name: fullName,
+                email: email,
+                message: `Name: ${fullName}\nEmail: ${email}\nPhone: ${phone || 'Not provided'}\nHire For: ${hire || 'Not specified'}\n\nMessage:\n${message}`,
+                to_email: 'wajitshaikh02@gmail.com',
+                custom_fields: {
+                    hire_for: hire || 'Not specified',
+                    phone: phone || 'Not provided'
+                }
+            };
+
+            setStatus('Sending your inquiry...', 'info');
+
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(payload)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    setStatus('Inquiry sent successfully! We will contact you soon.', 'success');
+                    form.reset();
+                } else {
+                    console.error('Web3Forms error:', data);
+                    setStatus(data.message || 'Unable to send at this time. Please try again later.', 'error');
+                }
+            })
+            .catch(error => {
+                console.error('Web3Forms request failed:', error);
+                setStatus('Unable to send at this time. Please try again later.', 'error');
+            });
         });
     }
 });
